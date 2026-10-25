@@ -41,6 +41,7 @@ Each notebook starts with a markdown overview, runs end-to-end on the included s
 | 7 | [Edge Detection](edge_detection/edge_detection.ipynb) | Edge detection | Sobel, Laplacian and Canny edge detectors, Gaussian pre-blur, and automatic Canny thresholds |
 | 8 | [Rotation, Translation and Resizing](rotation_translation_resizing/rotation_translation_resizing.ipynb) | Geometric transformations | Affine matrices, rotation with an enlarged canvas, translation, combining transforms into one warp, and interpolation methods |
 | 9 | [Perspective Transform](perspective_transform/perspective_transform.ipynb) | Perspective | Homography from four corner points, straightening a traffic sign, and checking the matrix |
+| 10 | [Region of Interest Selection](region_of_interest_selection/region_of_interest_selection.ipynb) | Masking | Building the ROI from the vanishing point of the lane lines (Hough transform and line fitting), with a fixed-polygon fallback |
 
 More notebooks are on the way. See the roadmap below.
 
@@ -78,6 +79,7 @@ ml-autonomous-systems/
 ├── edge_detection/                      # 7. Sobel, Laplacian and Canny edges
 ├── rotation_translation_resizing/       # 8. Rotation, translation and resizing
 ├── perspective_transform/               # 9. Perspective transform of a traffic sign
+├── region_of_interest_selection/        # 10. Polygon region of interest and masking
 ├── ...                                  # More notebooks coming soon
 └── README.md
 ```
