@@ -46,6 +46,7 @@ Each notebook starts with a markdown overview, runs end-to-end on the included s
 | 12 | [Detecting Lane Lines](lane_lines_hough/lane_lines_hough.ipynb) | Lane detection | Vanishing-point ROI, probabilistic Hough segments, averaging and extending lanes, and the overlay |
 | 13 | [Template Matching](template_matching/template_matching.ipynb) | Feature matching | Matching methods, score thresholds, non-maximum suppression and multi-scale search |
 | 14 | [Corner Detection](corner_detection/corner_detection.ipynb) | Corners | Harris response, non-maximum suppression, Shi-Tomasi corners, sub-pixel refinement, and handling transparent backgrounds |
+| 15 | [Image Pyramids](image_pyramids/image_pyramids.ipynb) | Multi-scale | Gaussian pyramids with `pyrDown` and `pyrUp`, aliasing, and exact reconstruction with Laplacian pyramids |
 
 More notebooks are on the way. See the roadmap below.
 
@@ -90,6 +91,7 @@ ml-autonomous-systems/
 ├── lane_lines_hough/                    # 12. Lane detection with the Hough transform
 ├── template_matching/                   # 13. Finding an object with template matching
 ├── corner_detection/                    # 14. Harris and Shi-Tomasi corner detection
+├── image_pyramids/                      # 15. Gaussian and Laplacian image pyramids
 ├── ...                                  # More notebooks coming soon
 └── README.md
 ```
