@@ -36,6 +36,9 @@ Each notebook starts with a markdown overview, runs end-to-end on the included s
 | 2 | [Lane Detection in Grayscale](lane_detection_grayscale/lane_detection_grayscale.ipynb) | Colour selection | Masking white lane pixels with a brightness threshold and comparing thresholds with histograms |
 | 3 | [Lane Detection in Colour](lane_detection_color/lane_detection_color.ipynb) | Colour selection | Masking white pixels with a per-channel RGB threshold and reading channel histograms |
 | 4 | [Region of Interest](lane_detection_region_of_interest/lane_detection_region_of_interest.ipynb) | Masking | Restricting detection to a trapezoid in front of the car and combining it with the colour mask |
+| 5 | [Colour Spaces](colorspaces/colorspaces.ipynb) | Colour spaces | Splitting an image into RGB and HSV channels and masking red, green, blue and yellow |
+| 6 | [Sharpening and Blurring](sharpening_and_blurring/sharpening_and_blurring.ipynb) | Convolution | Kernels, sharpening, box, Gaussian, median and bilateral blurs, and unsharp masking |
+| 7 | [Edge Detection](edge_detection/edge_detection.ipynb) | Edge detection | Sobel, Laplacian and Canny edge detectors, Gaussian pre-blur, and automatic Canny thresholds |
 
 More notebooks are on the way. See the roadmap below.
 
@@ -46,7 +49,7 @@ More notebooks are on the way. See the roadmap below.
 * **Phase 1: Image Processing & Filtering** — OpenCV basics, convolution filters, and Canny/Sobel edge detection.
   * ✅ Colour spaces and grayscale conversion
   * ✅ Colour selection of lane pixels (grayscale and RGB)
-  * ⏳ Gaussian blur, Canny and Sobel edge detection
+  * ✅ Gaussian blur, Sobel, Laplacian and Canny edge detection
 * **Phase 2: Geometric Transformations** — Camera calibration and perspective mapping (Bird's-Eye View).
 * **Phase 3: Feature Extraction** — Template matching, HOG feature extraction, and corner detection.
 * **Phase 4: Lane & Object Detection** — Region-of-interest masking and classifier-based detection.
@@ -66,6 +69,9 @@ ml-autonomous-systems/
 ├── lane_detection_grayscale/            # 2. White lane mask from a grayscale image
 ├── lane_detection_color/                # 3. White lane mask from a colour image
 ├── lane_detection_region_of_interest/   # 4. Region-of-interest masking
+├── colorspaces/                         # 5. Colour channels and colour masks
+├── sharpening_and_blurring/             # 6. Convolution, sharpening and blurring
+├── edge_detection/                      # 7. Sobel, Laplacian and Canny edges
 ├── ...                                  # More notebooks coming soon
 └── README.md
 ```
