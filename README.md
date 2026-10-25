@@ -1,6 +1,6 @@
 # 🚗 Autonomous Systems & Computer Vision Pipelines
 
-> **Core computer vision techniques, image feature engineering, and neural networks for autonomous vehicle perception.**
+> **Classical computer vision techniques, image feature engineering, and geometry for autonomous vehicle perception.**
 
 ---
 
@@ -9,10 +9,7 @@
 <div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; padding: 20px 0;">
   <a href="https://www.python.org" target="_blank" title="Python"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="50" height="50" /></a>
   <a href="https://opencv.org/" target="_blank" title="OpenCV"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV" width="50" height="50" /></a>
-  <a href="https://www.tensorflow.org/" target="_blank" title="TensorFlow"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" width="50" height="50" /></a>
-  <a href="https://keras.io/" target="_blank" title="Keras"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-plain.svg" alt="Keras" width="50" height="50" /></a>
   <a href="https://numpy.org/" target="_blank" title="NumPy"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" width="50" height="50" /></a>
-  <a href="https://pandas.pydata.org/" target="_blank" title="Pandas"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" width="50" height="50" /></a>
   <a href="https://git-scm.com/" target="_blank" title="Git"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" width="50" height="50" /></a>
 </div>
 
@@ -20,15 +17,15 @@
 
 ## 🚧 Status: In Development
 
-This repository is under active construction and grows notebook by notebook. It houses practical implementations of computer vision algorithms, image processing pipelines, and deep learning architectures for self-driving vehicle perception.
+This repository is under active construction and grows notebook by notebook. It houses practical implementations of classical computer vision algorithms and image processing pipelines for self-driving vehicle perception.
 
-The first notebooks build the foundation of a classic **lane detection pipeline**. Many more are on the way.
+The notebooks build the foundation of a classic **lane detection pipeline** step by step, together with the image features and geometry it needs.
 
 ---
 
 ## 📓 Notebooks
 
-Each notebook starts with a markdown overview, runs end-to-end on the included sample road image, and saves all outputs.
+Each notebook starts with a markdown overview, runs end-to-end on the sample image in its own folder, and saves all outputs.
 
 | # | Notebook | Topic | What you learn |
 |---|---|---|---|
@@ -50,7 +47,7 @@ Each notebook starts with a markdown overview, runs end-to-end on the included s
 | 16 | [Colour Histograms and Back Projection](color_histograms/color_histograms.ipynb) | Colour features | BGR and HSV histograms, hue-saturation histogram, and back projection to find a sample colour |
 | 17 | [Histogram of Oriented Gradients](hog_features/hog_features.ipynb) | Shape features | Gradient strength and direction, orientation histograms per cell, block normalisation, and HOG with scikit-image |
 
-More notebooks are on the way. See the roadmap below.
+More notebooks are planned. See the roadmap below.
 
 ---
 
@@ -63,15 +60,14 @@ More notebooks are on the way. See the roadmap below.
 * **Phase 2: Geometric Transformations** — Camera calibration and perspective mapping (Bird's-Eye View).
   * ✅ Rotation, translation and resizing
   * ✅ Perspective transform (bird's-eye view)
+  * ⏳ Camera calibration
 * **Phase 3: Feature Extraction** — Template matching, HOG feature extraction, and corner detection.
   * ✅ Template matching
   * ✅ Corner detection (Harris and Shi-Tomasi)
   * ✅ HOG feature extraction
-* **Phase 4: Lane & Object Detection** — Region-of-interest masking and classifier-based detection.
+* **Phase 4: Lane Detection** — Region-of-interest masking and the Hough transform for lane lines.
   * ✅ Region-of-interest masking
   * ✅ Hough transform for lane lines
-  * ⏳ Classifier-based object detection
-* **Phase 5: Traffic Sign Classification** — Convolutional Neural Networks (CNNs) using TensorFlow and Keras.
 
 ---
 
@@ -97,8 +93,8 @@ ml-autonomous-systems/
 ├── image_pyramids/                      # 15. Gaussian and Laplacian image pyramids
 ├── color_histograms/                    # 16. Colour histograms and back projection
 ├── hog_features/                        # 17. Histogram of oriented gradients
-├── ...                                  # More notebooks coming soon
+├── ...                                  # More notebooks planned
 └── README.md
 ```
 
-Each folder contains its notebook, the sample image `image_lane_c.jpg`, and the images the notebook saves.
+Each folder contains its notebook, the sample image the notebook loads, and the images the notebook saves.
