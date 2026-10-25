@@ -45,6 +45,7 @@ Each notebook starts with a markdown overview, runs end-to-end on the included s
 | 11 | [Line Detection with the Hough Transform](hough_transform/hough_transform.ipynb) | Hough transform | Polar line representation, voting in the accumulator, the vote threshold, and reading line angles |
 | 12 | [Detecting Lane Lines](lane_lines_hough/lane_lines_hough.ipynb) | Lane detection | Vanishing-point ROI, probabilistic Hough segments, averaging and extending lanes, and the overlay |
 | 13 | [Template Matching](template_matching/template_matching.ipynb) | Feature matching | Matching methods, score thresholds, non-maximum suppression and multi-scale search |
+| 14 | [Corner Detection](corner_detection/corner_detection.ipynb) | Corners | Harris response, non-maximum suppression, Shi-Tomasi corners, sub-pixel refinement, and handling transparent backgrounds |
 
 More notebooks are on the way. See the roadmap below.
 
@@ -61,6 +62,7 @@ More notebooks are on the way. See the roadmap below.
   * ✅ Perspective transform (bird's-eye view)
 * **Phase 3: Feature Extraction** — Template matching, HOG feature extraction, and corner detection.
   * ✅ Template matching
+  * ✅ Corner detection (Harris and Shi-Tomasi)
 * **Phase 4: Lane & Object Detection** — Region-of-interest masking and classifier-based detection.
   * ✅ Region-of-interest masking
   * ✅ Hough transform for lane lines
@@ -87,6 +89,7 @@ ml-autonomous-systems/
 ├── hough_transform/                     # 11. Line detection with the Hough transform
 ├── lane_lines_hough/                    # 12. Lane detection with the Hough transform
 ├── template_matching/                   # 13. Finding an object with template matching
+├── corner_detection/                    # 14. Harris and Shi-Tomasi corner detection
 ├── ...                                  # More notebooks coming soon
 └── README.md
 ```
