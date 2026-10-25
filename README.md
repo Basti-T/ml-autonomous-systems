@@ -40,6 +40,7 @@ Each notebook starts with a markdown overview, runs end-to-end on the included s
 | 6 | [Sharpening and Blurring](sharpening_and_blurring/sharpening_and_blurring.ipynb) | Convolution | Kernels, sharpening, box, Gaussian, median and bilateral blurs, and unsharp masking |
 | 7 | [Edge Detection](edge_detection/edge_detection.ipynb) | Edge detection | Sobel, Laplacian and Canny edge detectors, Gaussian pre-blur, and automatic Canny thresholds |
 | 8 | [Rotation, Translation and Resizing](rotation_translation_resizing/rotation_translation_resizing.ipynb) | Geometric transformations | Affine matrices, rotation with an enlarged canvas, translation, combining transforms into one warp, and interpolation methods |
+| 9 | [Perspective Transform](perspective_transform/perspective_transform.ipynb) | Perspective | Homography from four corner points, straightening a traffic sign, and checking the matrix |
 
 More notebooks are on the way. See the roadmap below.
 
@@ -53,6 +54,7 @@ More notebooks are on the way. See the roadmap below.
   * ✅ Gaussian blur, Sobel, Laplacian and Canny edge detection
 * **Phase 2: Geometric Transformations** — Camera calibration and perspective mapping (Bird's-Eye View).
   * ✅ Rotation, translation and resizing
+  * ✅ Perspective transform (bird's-eye view)
 * **Phase 3: Feature Extraction** — Template matching, HOG feature extraction, and corner detection.
 * **Phase 4: Lane & Object Detection** — Region-of-interest masking and classifier-based detection.
   * ✅ Region-of-interest masking
@@ -75,6 +77,7 @@ ml-autonomous-systems/
 ├── sharpening_and_blurring/             # 6. Convolution, sharpening and blurring
 ├── edge_detection/                      # 7. Sobel, Laplacian and Canny edges
 ├── rotation_translation_resizing/       # 8. Rotation, translation and resizing
+├── perspective_transform/               # 9. Perspective transform of a traffic sign
 ├── ...                                  # More notebooks coming soon
 └── README.md
 ```
