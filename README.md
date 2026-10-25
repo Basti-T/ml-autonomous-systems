@@ -48,6 +48,7 @@ Each notebook starts with a markdown overview, runs end-to-end on the included s
 | 14 | [Corner Detection](corner_detection/corner_detection.ipynb) | Corners | Harris response, non-maximum suppression, Shi-Tomasi corners, sub-pixel refinement, and handling transparent backgrounds |
 | 15 | [Image Pyramids](image_pyramids/image_pyramids.ipynb) | Multi-scale | Gaussian pyramids with `pyrDown` and `pyrUp`, aliasing, and exact reconstruction with Laplacian pyramids |
 | 16 | [Colour Histograms and Back Projection](color_histograms/color_histograms.ipynb) | Colour features | BGR and HSV histograms, hue-saturation histogram, and back projection to find a sample colour |
+| 17 | [Histogram of Oriented Gradients](hog_features/hog_features.ipynb) | Shape features | Gradient strength and direction, orientation histograms per cell, block normalisation, and HOG with scikit-image |
 
 More notebooks are on the way. See the roadmap below.
 
@@ -65,6 +66,7 @@ More notebooks are on the way. See the roadmap below.
 * **Phase 3: Feature Extraction** — Template matching, HOG feature extraction, and corner detection.
   * ✅ Template matching
   * ✅ Corner detection (Harris and Shi-Tomasi)
+  * ✅ HOG feature extraction
 * **Phase 4: Lane & Object Detection** — Region-of-interest masking and classifier-based detection.
   * ✅ Region-of-interest masking
   * ✅ Hough transform for lane lines
@@ -94,6 +96,7 @@ ml-autonomous-systems/
 ├── corner_detection/                    # 14. Harris and Shi-Tomasi corner detection
 ├── image_pyramids/                      # 15. Gaussian and Laplacian image pyramids
 ├── color_histograms/                    # 16. Colour histograms and back projection
+├── hog_features/                        # 17. Histogram of oriented gradients
 ├── ...                                  # More notebooks coming soon
 └── README.md
 ```
