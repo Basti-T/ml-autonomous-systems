@@ -1,10 +1,10 @@
 # 🚗 Autonomous Systems & Computer Vision Pipelines
 
-> **Classical computer vision techniques, image feature engineering, and geometry for autonomous vehicle perception.**
+> **Classical computer vision for autonomous vehicle perception: image processing, geometric transformations, feature detection and a complete lane detection pipeline, implemented with OpenCV and Python.**
 
 ---
 
-## 🧰 Tech Stack & Tools
+## 🧰 Tech Stack
 
 <div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; padding: 20px 0;">
   <a href="https://www.python.org" target="_blank" title="Python"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="50" height="50" /></a>
@@ -13,19 +13,36 @@
   <a href="https://git-scm.com/" target="_blank" title="Git"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" width="50" height="50" /></a>
 </div>
 
+Libraries used: OpenCV (`opencv-python`), NumPy, Matplotlib, and scikit-image (for HOG features).
+
 ---
 
-## 🚧 Status: In Development
+## 📌 Overview
 
-This repository is under active construction and grows notebook by notebook. It houses practical implementations of classical computer vision algorithms and image processing pipelines for self-driving vehicle perception.
+The repository is a structured walk through the classical computer vision methods that an autonomous vehicle uses to see the road. Each notebook covers one method, explains the theory in markdown, applies it to a sample photo, checks the result, and saves its outputs. The notebooks build on each other and end with a lane detection pipeline.
 
-The notebooks build the foundation of a classic **lane detection pipeline** step by step, together with the image features and geometry it needs.
+Every notebook:
+- starts with a markdown overview of the method and its use in driving;
+- runs end-to-end on the sample image in its own folder;
+- checks results with numbers or overlays, not only by eye;
+- saves all outputs to an `output/` folder.
+
+---
+
+## 🚀 Getting Started
+
+```bash
+git clone https://github.com/Basti-T/ml-autonomous-systems.git
+cd ml-autonomous-systems
+python -m pip install opencv-python numpy matplotlib scikit-image jupyter
+jupyter notebook
+```
+
+Open any notebook and run all cells. Each notebook works from its own folder, so run it from there or start Jupyter in that folder.
 
 ---
 
 ## 📓 Notebooks
-
-Each notebook starts with a markdown overview, runs end-to-end on the sample image in its own folder, and saves all outputs.
 
 | # | Notebook | Topic | What you learn |
 |---|---|---|---|
@@ -47,27 +64,15 @@ Each notebook starts with a markdown overview, runs end-to-end on the sample ima
 | 16 | [Colour Histograms and Back Projection](color_histograms/color_histograms.ipynb) | Colour features | BGR and HSV histograms, hue-saturation histogram, and back projection to find a sample colour |
 | 17 | [Histogram of Oriented Gradients](hog_features/hog_features.ipynb) | Shape features | Gradient strength and direction, orientation histograms per cell, block normalisation, and HOG with scikit-image |
 
-More notebooks are planned. See the roadmap below.
-
 ---
 
-## 🎯 Roadmap
+## 🗺️ Topics
 
-* **Phase 1: Image Processing & Filtering** — OpenCV basics, convolution filters, and Canny/Sobel edge detection.
-  * ✅ Colour spaces and grayscale conversion
-  * ✅ Colour selection of lane pixels (grayscale and RGB)
-  * ✅ Gaussian blur, Sobel, Laplacian and Canny edge detection
-* **Phase 2: Geometric Transformations** — Camera calibration and perspective mapping (Bird's-Eye View).
-  * ✅ Rotation, translation and resizing
-  * ✅ Perspective transform (bird's-eye view)
-  * ⏳ Camera calibration
-* **Phase 3: Feature Extraction** — Template matching, HOG feature extraction, and corner detection.
-  * ✅ Template matching
-  * ✅ Corner detection (Harris and Shi-Tomasi)
-  * ✅ HOG feature extraction
-* **Phase 4: Lane Detection** — Region-of-interest masking and the Hough transform for lane lines.
-  * ✅ Region-of-interest masking
-  * ✅ Hough transform for lane lines
+- **Image basics and colour:** loading and converting images, colour spaces, channel histograms and colour masks (notebooks 1, 2, 3, 5, 16).
+- **Filtering and edges:** convolution, sharpening and blurring, Sobel, Laplacian and Canny edge detection (notebooks 6, 7).
+- **Geometric transformations:** rotation, translation, resizing, perspective transform and bird's-eye view (notebooks 8, 9).
+- **Feature detection and matching:** template matching, Harris and Shi-Tomasi corners, image pyramids, and histograms of oriented gradients (notebooks 13, 14, 15, 17).
+- **Lane detection:** colour and brightness thresholds, region of interest, Hough transform, and a vanishing-point based lane pipeline (notebooks 2, 3, 4, 10, 11, 12).
 
 ---
 
@@ -93,7 +98,6 @@ ml-autonomous-systems/
 ├── image_pyramids/                      # 15. Gaussian and Laplacian image pyramids
 ├── color_histograms/                    # 16. Colour histograms and back projection
 ├── hog_features/                        # 17. Histogram of oriented gradients
-├── ...                                  # More notebooks planned
 └── README.md
 ```
 
