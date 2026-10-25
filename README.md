@@ -42,6 +42,8 @@ Each notebook starts with a markdown overview, runs end-to-end on the included s
 | 8 | [Rotation, Translation and Resizing](rotation_translation_resizing/rotation_translation_resizing.ipynb) | Geometric transformations | Affine matrices, rotation with an enlarged canvas, translation, combining transforms into one warp, and interpolation methods |
 | 9 | [Perspective Transform](perspective_transform/perspective_transform.ipynb) | Perspective | Homography from four corner points, straightening a traffic sign, and checking the matrix |
 | 10 | [Region of Interest Selection](region_of_interest_selection/region_of_interest_selection.ipynb) | Masking | Building the ROI from the vanishing point of the lane lines (Hough transform and line fitting), with a fixed-polygon fallback |
+| 11 | [Line Detection with the Hough Transform](hough_transform/hough_transform.ipynb) | Hough transform | Polar line representation, voting in the accumulator, the vote threshold, and reading line angles |
+| 12 | [Detecting Lane Lines](lane_lines_hough/lane_lines_hough.ipynb) | Lane detection | Vanishing-point ROI, probabilistic Hough segments, averaging and extending lanes, and the overlay |
 
 More notebooks are on the way. See the roadmap below.
 
@@ -59,7 +61,7 @@ More notebooks are on the way. See the roadmap below.
 * **Phase 3: Feature Extraction** — Template matching, HOG feature extraction, and corner detection.
 * **Phase 4: Lane & Object Detection** — Region-of-interest masking and classifier-based detection.
   * ✅ Region-of-interest masking
-  * ⏳ Hough transform for lane lines
+  * ✅ Hough transform for lane lines
   * ⏳ Classifier-based object detection
 * **Phase 5: Traffic Sign Classification** — Convolutional Neural Networks (CNNs) using TensorFlow and Keras.
 
@@ -79,7 +81,9 @@ ml-autonomous-systems/
 ├── edge_detection/                      # 7. Sobel, Laplacian and Canny edges
 ├── rotation_translation_resizing/       # 8. Rotation, translation and resizing
 ├── perspective_transform/               # 9. Perspective transform of a traffic sign
-├── region_of_interest_selection/        # 10. Polygon region of interest and masking
+├── region_of_interest_selection/        # 10. Region of interest from the vanishing point
+├── hough_transform/                     # 11. Line detection with the Hough transform
+├── lane_lines_hough/                    # 12. Lane detection with the Hough transform
 ├── ...                                  # More notebooks coming soon
 └── README.md
 ```
