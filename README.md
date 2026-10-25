@@ -44,6 +44,7 @@ Each notebook starts with a markdown overview, runs end-to-end on the included s
 | 10 | [Region of Interest Selection](region_of_interest_selection/region_of_interest_selection.ipynb) | Masking | Building the ROI from the vanishing point of the lane lines (Hough transform and line fitting), with a fixed-polygon fallback |
 | 11 | [Line Detection with the Hough Transform](hough_transform/hough_transform.ipynb) | Hough transform | Polar line representation, voting in the accumulator, the vote threshold, and reading line angles |
 | 12 | [Detecting Lane Lines](lane_lines_hough/lane_lines_hough.ipynb) | Lane detection | Vanishing-point ROI, probabilistic Hough segments, averaging and extending lanes, and the overlay |
+| 13 | [Template Matching](template_matching/template_matching.ipynb) | Feature matching | Matching methods, score thresholds, non-maximum suppression and multi-scale search |
 
 More notebooks are on the way. See the roadmap below.
 
@@ -59,6 +60,7 @@ More notebooks are on the way. See the roadmap below.
   * ✅ Rotation, translation and resizing
   * ✅ Perspective transform (bird's-eye view)
 * **Phase 3: Feature Extraction** — Template matching, HOG feature extraction, and corner detection.
+  * ✅ Template matching
 * **Phase 4: Lane & Object Detection** — Region-of-interest masking and classifier-based detection.
   * ✅ Region-of-interest masking
   * ✅ Hough transform for lane lines
@@ -84,6 +86,7 @@ ml-autonomous-systems/
 ├── region_of_interest_selection/        # 10. Region of interest from the vanishing point
 ├── hough_transform/                     # 11. Line detection with the Hough transform
 ├── lane_lines_hough/                    # 12. Lane detection with the Hough transform
+├── template_matching/                   # 13. Finding an object with template matching
 ├── ...                                  # More notebooks coming soon
 └── README.md
 ```
